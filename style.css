@@ -6,3 +6,874 @@
     box-sizing: border-box;
     font-family: 'League Spartan', sans-serif;
 }
+
+body{
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+}
+
+img{
+    width: 100%;
+}
+button{
+    cursor: pointer;
+}
+.btn, #menu, #menu-close{
+    display: none;
+}
+
+
+h1, h2, h4{
+    color: #222;
+}
+
+h1{
+    font-size: 3.6rem;
+}
+
+h2{
+    font-size: 3.1rem;
+}
+
+h4{
+    font-size: 2.1rem;
+}
+h6{
+    font-size: 1rem;
+}
+
+.section-p1{
+    padding: 40px 80px;
+}
+.section-m1{
+    margin: 40px 0;
+}
+
+
+
+
+
+#navbar img{
+    max-height: 2rem;
+    height: 1rem;
+}
+
+/* header */
+#header .navbarholder{
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    padding: 1rem 6rem;
+    background-color: #e3e6f3;
+    box-shadow: 0 .01rem .6rem rgb(0, 0, 0, .19);
+    position: sticky;
+    z-index: 99;
+    top: 0;
+    left: 0;
+}
+
+#navbar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.6rem;
+}
+
+
+
+#navbar li{
+    list-style: none;
+    transition: all .21s ease-in-out;
+    position: relative;
+}
+
+#navbar li:hover{
+    transform: scale(1.06);
+}
+
+#navbar li a{
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1rem;
+    color: #1a1a1a;
+    transition: all .21s ease-in-out;
+}
+
+#navbar li a:hover, #navbar li a.active{
+    color: #088178;
+}
+#navbar li a.active::after, #navbar li a:hover:after{
+    content: '';
+    width: 36%;
+    height: 2px;
+    background-color: #088178;
+    position: absolute;
+    bottom: -3px;
+    left: 0px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Home page */
+
+#hero{
+    background-image: url('img/hero4.png');
+    background-size: cover;
+    background-position: top 25% right 0;
+    height: 89.5vh;
+    padding: 0 6rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+#hero h1{
+    color: #088178;
+    padding-bottom: 1rem;
+}
+
+#hero h4{
+    padding-bottom: .6rem;
+}
+
+#hero button{
+    cursor: pointer;
+    color: #088178;
+    font-size: 1.2rem;
+    font-weight: 600;
+
+    background-image: url('img/button.png');
+    background-color: transparent;
+    background-repeat: no-repeat;
+    
+    border: 0;
+    outline: transparent;
+    margin: 1rem 0;
+    padding: 1rem 5rem 1rem 4rem;
+}
+
+
+
+
+
+
+#feature{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: .6rem;
+    flex-wrap: wrap;
+}
+
+#feature .feature-box{
+    width: 13rem;
+    text-align: center;
+    padding: 1.3rem .6rem;
+    border: 1px solid #77ecd0;
+    border-radius: .36rem;
+    box-shadow: .01rem .01rem 1rem  rgb(0, 0, 0, .06);
+    transition: all .33s ease;
+}
+    
+#feature .feature-box:hover{
+    box-shadow: .01rem .01rem 2rem .1rem rgb(0, 0, 0, .13);
+    /* transform: scale(1.001); */
+}
+
+#feature .feature-box h6{
+    padding: .6rem .7rem;
+    line-height: 1;
+    border-radius: .3rem;
+    color: #000000a3;
+    background-color: #fddde4;
+    display: inline-block;
+}
+
+#feature .feature-box:nth-child(2) h6{
+    background-color: #cdebbc;
+}
+#feature .feature-box:nth-child(3) h6{
+    background-color: #d1e8f2;
+}
+#feature .feature-box:nth-child(4) h6{
+    background-color: #cdd4f8;
+}
+#feature .feature-box:nth-child(5) h6{
+    background-color: #f6dbf6;
+}
+#feature .feature-box:nth-child(6) h6{
+    background-color: #fff2e5;
+}
+
+
+#feature .feature-box img{
+    width: 100%;
+    margin-bottom: .6rem;
+}
+
+
+
+
+
+
+
+
+
+#featured-products{
+    text-align: center;
+    margin-top: 1.6rem;
+}
+
+#featured-products h2{
+    font-weight: 600;
+}
+
+#featured-products p{
+    margin-top: .3rem;
+    font-size: 1.2rem;
+    color: #606063;
+}
+
+
+
+#featured-products .product-container{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 2.6rem;
+
+    margin: 3rem 0;
+}
+
+
+#featured-products .product{
+    width: 21%;
+    min-width: 15rem;
+    padding: .9rem; 
+    border: 1px solid #17739a7e;
+    border: 1px solid #F5DEB3;
+    border-radius: 1rem;
+    cursor: pointer; 
+
+    box-shadow: 1rem 1rem 2rem rgba(0, 0, 0, 0.1);
+    transition: all .26s ease;
+
+    position: relative;
+}
+
+#featured-products .product:hover{
+    box-shadow: .6rem .6rem 2rem rgba(0, 0, 0, 0.3);
+    transform: scale(1.16);
+}
+
+#featured-products .product img{
+    border-radius: .6rem;
+}
+
+
+
+
+#featured-products .product .description{
+    text-align: start;
+    padding: .31rem .13rem;
+}
+
+#featured-products .product .description span{
+    font-size: .9rem;
+    font-weight: 300;
+    color: #606063;
+}
+
+#featured-products .product .description h5{
+    font-weight: 600;
+    font-size: 1rem;
+    color: #1a1a1a;
+    padding-top: .5rem;
+}
+
+
+
+#featured-products .product .stars{
+    display: flex;
+    justify-content: left;
+    padding-top: .16rem;
+}
+
+#featured-products .product .stars img{
+    max-height: .9rem;
+    max-width: .9rem;
+}
+
+#featured-products .product .description h4{
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #088178;
+    padding-top: 1rem;
+}
+
+
+
+#featured-products .product a{
+    height: 2.3rem;
+    width: 2.3rem;
+    background-color: #14b3a910;
+    border: 1px solid #08817999;
+    border-radius: 50%;
+
+    position: absolute;
+    right: 1.1rem;
+    bottom: 1.1rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#featured-products .product a img{
+    width: 1.16rem;
+    height: auto;
+}
+
+
+
+
+
+
+
+#banner{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url('img/banner/b2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 19rem;
+
+    text-align: center;
+
+    padding: 1.6rem;
+}
+
+#banner h4{
+    color: white;
+    font-size: 1.6rem;
+}
+#banner h2{
+    color: white;
+    font-size: 3.1rem;
+    padding: 1rem 0;
+}
+#banner h2 span{
+    color: red;
+}
+
+
+#banner button{
+    padding: .8rem 1.9rem;
+    font-size: 1.1rem;
+    font-weight: 500;
+
+    background-color: #fff;
+    border: none;
+    border-radius: .3rem;
+    outline: transparent;
+
+    transition: all .21s ease-in-out;
+}
+
+#banner button:hover{
+    background-color: #088178;
+    color: #fff;
+    transform: scale(1.1);
+}
+
+
+
+
+
+
+#call-to-action-banners{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+#call-to-action-banners .banner-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: .5rem;
+    
+    background-image: url('img/banner/b17.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    
+    height: 21rem;
+    width: 40rem;
+    min-width: 36rem;
+    
+    border-radius: .3rem; 
+    padding: 1.6rem;
+}
+#call-to-action-banners .banner-box:nth-child(2){
+    background-image: url('img/banner/b10.jpg');
+}
+
+#call-to-action-banners .banner-box h4{
+    color: #fff;
+    font-size: 1.6rem;
+    font-weight: 300;
+}
+#call-to-action-banners .banner-box h2{
+    color: #fff;
+    font-size: 2.6rem;
+    font-weight: 800;
+}
+#call-to-action-banners .banner-box span{
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 400;
+    padding-bottom: .6rem;
+}
+
+#call-to-action-banners .banner-box button{
+    padding: .8rem 1.6rem;
+    
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 500;
+    
+    border: 1px solid white;
+    outline: transparent;
+    background-color: transparent; 
+
+    transition: all .21s ease-in-out;
+}
+
+#call-to-action-banners .banner-box:hover > button{
+    transform: scale(1.1);
+    border-radius: .21rem;
+    background-color: #fff;
+    color: rgba(0, 0, 0, 0.73);
+}
+
+
+
+
+
+
+#text-banners{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2.3rem;
+}
+
+#text-banners .banner-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: .6rem;
+    
+    background-image: url('img/banner/b7.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    
+    height: 16rem;
+    width: 26rem;
+    min-width: 24rem;
+    
+    border-radius: .3rem; 
+    padding: 1.6rem;
+}
+#text-banners .banner-box:nth-child(2){
+    background-image: url('img/banner/b4.jpg');
+}
+#text-banners .banner-box:nth-child(3){
+    background-image: url('img/banner/b18.jpg');
+}
+
+
+#text-banners .banner-box h2{
+    color: #fff;
+    font-weight: 900;
+    font-size: 1.6rem;
+}
+#text-banners .banner-box h3{
+    color: rgba(255, 255, 255, 0.78);
+    font-weight: 700;
+    font-size: 1.3rem;
+}
+
+
+
+
+#newsletter{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    
+    background-image: url('img/banner/b14.png');
+    background-repeat: no-repeat;
+    background-position: 20% 30%;
+    background-color: #041e42;
+
+    color: white;
+}
+
+#newsletter h4{
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: white;
+    padding-bottom: .6rem;
+}
+#newsletter p{
+    font-size: 1rem;
+    font-weight: 600;
+    color: rgba(167, 197, 255, 0.797);
+}
+#newsletter span{
+    color: #ffbd27;
+}
+
+
+
+#newsletter .form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#newsletter input{
+    padding: .7rem;
+    font-size: 1rem;
+    width: 100%;
+
+    border: none;
+    border-radius: .21rem;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    outline: transparent;
+}
+#newsletter button{
+    width: 7rem;
+    padding: .75rem 1.3rem;
+    background-color: #088178;
+    color: white;
+    
+    border: none;
+    border-radius: .21rem; 
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    outline: transparent;
+
+    transition: all .21s ease-in-out;
+}
+#newsletter button:hover{
+    transform: scale(1.16);
+}
+
+
+
+
+
+
+footer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 1rem 5rem;
+}
+
+footer .columndiv{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 2rem;
+}
+footer .columndiv img{
+    cursor: pointer;
+}
+
+footer .columndiv .logo{
+    max-width: 9rem;
+    margin-bottom: 1.3rem;
+}
+
+footer .columndiv h4{
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-bottom: .9rem;
+}
+footer .columndiv p, footer .columndiv a{
+    font-size: 1rem;
+    color: rgba(34, 34, 34, 0.793);
+    margin-bottom: .26rem;
+    text-decoration: none;
+}
+
+
+footer .columndiv .icons img{
+    max-width: 1.3rem;
+}
+
+footer .columndiv .followus{
+    margin-top: 1.6rem;
+}
+
+footer .columndiv .followus .icons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .3rem;
+}
+footer .columndiv .followus .icons img{
+    cursor: pointer;
+}
+footer .columndiv .followus h4{
+    margin: 0;
+}
+
+
+footer .columndiv .rowdiv img{
+    max-width: 10rem;
+    border: 2px solid #08817966;
+    border-radius: .3rem;
+    margin-bottom: 1.6rem;
+    cursor: pointer;
+}
+
+
+
+
+
+.copyright{
+    width: 100%;
+    text-align: center;
+
+    margin-bottom: 2.1rem;
+
+    color: rgba(34, 34, 34, 0.6);
+}
+
+
+
+
+
+
+
+
+@media (max-width: 820px) {
+
+    .btn{
+        display: flex;
+    }
+    #menu, #menu-close{
+        display: flex;
+        outline: none;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+    }
+
+    #navbar {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 1.6rem;
+        
+        position: fixed;
+        top: 0;
+        right: -70%;
+
+        height: 100vh;
+        width: 40vw;
+
+        padding: 3.9rem 2rem;
+
+        background-color: #e3e6f3;
+        box-shadow: -.1rem 0 2rem rgba(0, 0, 0, 0.34);
+
+        transition: all .4s ease-in-out;
+    }
+
+    #navbar.open{
+        right: 0;
+        transition: all .4s ease-in-out;
+    }
+
+    #navbar li a{
+        font-size: 1.6rem;
+    }
+    #navbar img{
+        height: 1.6rem;
+    }
+
+    #header .navbarholder{
+        padding: 1rem 3rem;
+        position: relative;
+    }
+
+    #header #navbar img, #header .btn img{
+        max-width: 1.6rem;
+    }
+
+    #header #navbar #menu-close{
+        position: absolute;
+        right: 2rem;
+        top: 2rem;
+    }
+
+
+    #hero {
+        background-position: top 0% right 30%;
+        height: 70vh;
+        padding: 0 4rem;
+    }
+
+
+    #feature{
+        margin-top: 2.1rem;
+    }
+
+
+    .section-p1{
+        padding: 1rem 2rem;
+    }
+
+    #featured-products{
+        margin-top: 1rem;
+    }
+    #featured-products .product{
+        width: 21rem;
+    }
+
+    #call-to-action-banners{
+        gap: 1.3rem;
+    }
+    #call-to-action-banners .banner-box {
+        min-width: 100%;
+    }
+
+    #text-banners{
+        padding: 1rem 2rem;
+        gap: 1.3rem;
+        width: 100%;
+        /* padding: 1rem 2rem; */
+    }
+    #text-banners .banner-box{
+        width: 29%;
+        min-width: 13rem;
+    }
+    
+    #newsletter{
+        padding: 2.6rem;
+    }
+
+    footer{
+        padding: 1rem 3rem;
+    }
+}
+
+
+
+@media (max-width: 520px) {
+
+    #text-banners .banner-box{
+        width: 100%;
+        min-width: 13rem;
+    }
+
+    
+    footer{
+        padding: 1rem 2rem;
+    }
+
+}
+
+
+
+
+@media (max-width: 450px) {
+
+    #header .navbarholder{
+        padding: 1rem 1.6rem;
+        padding-right: 2.1rem;
+    }
+    #navbar{
+        width: 75vw;
+        right: -100%;
+    }
+
+
+
+    #hero{
+        padding: 0 1.6rem;
+        height: 60vh;
+        background-position: top 30% right 40%;
+    }
+
+    #featured-products p{
+        font-size: 1.4rem;
+    }
+
+    #featured-products .product-container {
+        margin-top: 1.3rem;
+        gap: 1.6rem;
+    }
+
+    #featured-products .product .description span{
+        font-size: 1.3rem;
+    }
+    #featured-products .product .description h5{
+        font-size: 1.3rem;
+        padding-top: .3rem;
+    }
+    #featured-products .product a{
+        height: 2.6rem;
+        width: 2.6rem;
+    }
+    #featured-products .product a img{
+        width: 1.3rem;
+    }
+
+
+
+    #banner h2{
+        font-size: 2.3rem;
+    }
+
+
+    #newsletter{
+        padding: 2rem;
+    }
+
+    footer .columndiv .rowdiv img {
+        margin-bottom: .6rem;
+    }
+
+}
