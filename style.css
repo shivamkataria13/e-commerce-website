@@ -59,6 +59,13 @@ h6{
     height: 1rem;
 }
 
+#header{
+    position: sticky;
+    z-index: 99;
+    top: 0;
+    left: 0;
+}
+
 /* header */
 #header .navbarholder{
     display: flex;
@@ -67,10 +74,6 @@ h6{
     padding: 1rem 6rem;
     background-color: #e3e6f3;
     box-shadow: 0 .01rem .6rem rgb(0, 0, 0, .19);
-    position: sticky;
-    z-index: 99;
-    top: 0;
-    left: 0;
 }
 
 #navbar{
@@ -930,7 +933,6 @@ footer .columndiv .rowdiv img{
 
 
 /* SHOP PAGE */
-
 #page-header{
     background-image: url('img/banner/b1.jpg');
     background-size: cover;
@@ -1132,3 +1134,123 @@ footer .columndiv .rowdiv img{
 
 }
 
+
+
+
+
+
+
+
+
+/* BLOG PAGE */
+#page-header.blog-header{
+    background-image: url('img/banner/b19.jpg');
+}
+
+#blog{
+    padding: 9rem 9rem 0 6rem;
+}
+
+#blog .blog-container{
+    display: grid;
+    grid-template-columns: .8fr 1fr;
+    align-items: center;
+    gap: 2rem;
+
+    width: 100%;
+    margin-bottom: 6rem;
+
+    position: relative;
+
+}
+
+#blog img{
+    height: 21rem;
+    object-fit: cover;
+}
+
+#blog .blogdetails h4{
+    font-size: 2.6rem;
+    color: rgba(0, 0, 0, 0.6);
+}
+#blog .blogdetails p{
+    font-size: 1.1rem;
+    padding: .6rem 0;
+    color: rgb(0, 0, 0);
+    margin: 1rem 0;
+}
+#blog .blogdetails a{
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: black;
+    
+    text-decoration: none;
+
+    position: relative;
+
+    transition: all .2s ease-in-out;
+}
+#blog .blogdetails a::after{
+    content: "";
+    height: 1.5px;
+    width: 2.6rem;
+    background-color: black;
+
+    position: absolute;
+    top: 35%;
+    left: 10.5rem;
+
+    transition: all .2s ease-in-out;
+}
+
+#blog .blogdetails a:hover::after{
+    background-color: #088178;
+}
+#blog .blogdetails a:hover{
+    color: #088178;
+}
+
+#blog .blog-container h1{
+    font-size: 4.5rem;
+    color: #c9cbce;
+
+    position: absolute;
+    top: -2.7rem;
+
+    z-index: -1;
+}
+
+
+
+
+@media (max-width: 900px) {
+    #blog{
+        padding: 6rem 6rem 0 6rem;
+    }
+}
+
+@media (max-width: 700px) {
+    #blog{
+        padding: 6rem 3rem 0 3rem;
+    }
+}
+
+@media (max-width: 550px) {
+
+    #blog{
+        padding: 6rem 2rem 0 2rem;
+    }
+
+    #blog .blog-container{
+        display: grid;
+        grid-template-columns: 1fr;
+        align-items: center;
+        gap: 1rem;
+
+        margin-bottom: 5rem;
+    }
+
+    #blog .blog-container .blogdetails p{
+        margin: .3rem 0;
+    }
+}
