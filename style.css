@@ -1640,3 +1640,177 @@ footer .columndiv .rowdiv img{
         justify-content: flex-start;
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* CART PAGE */
+
+#cart{
+    padding: 4rem 6rem;
+}
+
+#cart .cross-icon{
+    max-width: 1rem;
+}
+
+#cart img{
+    max-width: 6rem;
+}
+
+#cart table{
+    width: 100%;
+    height: 100%;
+    table-layout: fixed;
+    white-space: nowrap;
+    
+    border: 2px solid rgba(0, 0, 0, 0.37);
+    border-radius: .6rem;
+}
+
+#cart table td{
+    padding: .2rem;
+    
+    color: rgba(0, 0, 0, 0.719);
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+
+#cart table thead td{
+    padding: 1rem;
+    
+    font-weight: 600;
+    font-size: 1rem;
+    color: #4f4f58;
+    
+    text-transform: uppercase;
+    
+    border-bottom: 1.5px solid rgba(0, 0, 0, 0.37);
+}
+
+#cart table td input{
+    padding: .6rem 1.6rem;
+    width: 3.1rem;
+}
+
+
+
+
+
+
+
+#total{
+    width: 100%;
+}
+
+#total h2{
+    /* font-size: 1.6rem; */
+    color: rgba(0, 0, 0, 0.75);
+    padding: 1rem;
+    text-align: center  ;
+}
+
+#total table{
+    margin: auto;
+    padding: 1rem;
+
+    width: 100%;
+    white-space: nowrap;
+   
+    border: 2px solid rgba(0, 0, 0, 0.37);
+    border-radius: .6rem;
+}
+
+#total table td{
+    padding: 1rem;
+    
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #000000b5;
+}
+
+#total table td span{
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+
+
+#total .buttons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* gap: 1rem; */
+
+    padding: 1rem;
+}
+
+#total .buttons input{
+    padding: .75rem;
+
+    border: 1px solid rgba(0, 0, 0, 0.436);
+    border-radius: 0;
+}
+
+#total .buttons button{
+    padding: .7rem 1.6rem;
+    font-size: 1.1rem;
+    
+    border: none;
+    border-radius: .3rem;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    
+    background-color: #088178;
+    color: white;
+    
+    transition: all .2s ease-in-out;
+}
+
+#total .buttons button:hover{
+    transform: scale(1.06);
+    border-radius: .3rem;
+}
+
+#total button.checkout{
+    padding: .7rem 1.6rem;
+    font-size: 1.1rem;
+    
+    border: none;
+    border-radius: .3rem;
+    
+    background-color: rgb(248, 216, 159);
+    color: black;
+    
+    margin-left: 2rem;
+    box-shadow: .1rem .1rem .3rem rgba(0, 0, 0, 0.4);
+}
+
+#total .buttons button.checkout:hover{
+    transform: scale(1.1);
+    border-radius: .3rem;
+    
+    background-color: rgb(242, 199, 125);
+    box-shadow: .1rem .1rem .6rem rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width:550px) {
+    
+#total button.checkout{
+    display: block;
+}
+
+}
