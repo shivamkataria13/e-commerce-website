@@ -1660,6 +1660,7 @@ footer .columndiv .rowdiv img{
 
 #cart{
     padding: 4rem 6rem;
+    overflow-x: auto;
 }
 
 #cart .cross-icon{
@@ -1688,6 +1689,24 @@ footer .columndiv .rowdiv img{
     text-align: center;
 }
 
+#cart table td:nth-child(1){
+    width: 6rem;
+}
+#cart table td:nth-child(2){
+    width: 6rem;
+}
+#cart table td:nth-child(3){
+    width: 13rem;
+}
+#cart table td:nth-child(4){
+    width: 6rem;
+}
+#cart table td:nth-child(5){
+    width: 6rem;
+}
+#cart table td:nth-child(6){
+    width: 6rem;
+}
 
 #cart table thead td{
     padding: 1rem;
@@ -1702,8 +1721,8 @@ footer .columndiv .rowdiv img{
 }
 
 #cart table td input{
-    padding: .6rem 1.6rem;
-    width: 3.1rem;
+    padding: .6rem .6rem;
+    width: 3.6rem;
 }
 
 
@@ -1754,9 +1773,16 @@ footer .columndiv .rowdiv img{
     align-items: center;
     justify-content: center;
     /* gap: 1rem; */
-
+    
     padding: 1rem;
 }
+
+#total .buttons .applycouponbutton{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 
 #total .buttons input{
     padding: .75rem;
@@ -1807,10 +1833,34 @@ footer .columndiv .rowdiv img{
     box-shadow: .1rem .1rem .6rem rgba(0, 0, 0, 0.5);
 }
 
-@media (max-width:550px) {
-    
-#total button.checkout{
-    display: block;
+@media (max-width:820px) {
+    #cart{
+        padding: 3rem 3rem;
+    }
 }
+
+
+@media (max-width:550px) {
+
+    #total .buttons{
+        display: block;
+    }
+    
+    #total .buttons .applycouponbutton{
+        margin-bottom: 1rem;
+    }
+
+    #total button.checkout{
+        display: block;
+        margin: auto auto;
+
+    }
+}
+
+@media (max-width:450px){
+
+    #cart{
+        padding: 3rem 2rem;
+    }
 
 }
